@@ -65,7 +65,7 @@ main .nav-topo ul {
   margin: 4px;
 }
 
-.cabeca ul li {
+.cabeca ul li a{
   color: white;
   text-decoration: none;
   list-style-type: none;
