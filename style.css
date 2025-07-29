@@ -1,30 +1,32 @@
 * {
   box-sizing: border-box;
+     
 }
+
 
 :root {
   --cor-barra-nav: #004aad;
   --cor-footer: #bed4f0;
+  --cor-catalago:#a3d2e0;
   --cor-barra-footer: rgba(0, 92, 169, 0.4);
-  --color-para-voce: rgba(169, 210, 243, 0.4);
+  --color-para-voce: rgba(81, 203, 233, 0.4);
   --color-button-para-voce: #679de4;
   --font-negrito: bold;
+  --color-rodapelink: #1f3552;
+  --cor-font-branco:  rgb(241, 241, 241);
+  --cor-rede-social: #6495f0;
 }
 
 main {
   justify-content: center;
+
+  
 }
 
 .home .imagem {
   width: 500px;
   height: 200px;
 
-}
-
-.imagem:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-  border-color: #b6eaf3;
 }
 
 html {
@@ -37,9 +39,10 @@ header {
   left: 0;
   width: 100%;
   z-index: 100;
-  margin: 1px;
+  margin: 0;
   width: 100%;
-  padding: 1px;
+  padding: 0;
+  margin-left: 0;
 
 }
 
@@ -49,7 +52,12 @@ header nav {
   padding: 1px;
   background-color: var(--cor-barra-nav);
   padding: 5px;
+  width: 100%;
+  gap: 0;
 
+}
+#navbar .nav-topo{
+  width: 100%;
 }
 
 main .nav-topo ul {
@@ -65,8 +73,8 @@ main .nav-topo ul {
   margin: 4px;
 }
 
-.cabeca ul li a{
-  color: white;
+.cabeca ul li a {
+  color: var(--cor-font-branco);
   text-decoration: none;
   list-style-type: none;
 }
@@ -84,16 +92,15 @@ a:visited {
   align-items: center;
   display: flex;
   flex-direction: column;
-  gap: 0;
   background: var(--cor-barra-footer);
   padding: 1px;
   width: 100%;
-
-}
+  padding: 8px;
+  }
 
 .catalogo {
   padding: 8px 2px;
-  background-color: var(--color-para-voce);
+  background-color: var(--cor-catalago);
   display: flex;
   flex-direction: column;
 
@@ -137,21 +144,14 @@ a:visited {
   border-radius: 8px;
   cursor: pointer;
   font-weight: var(--font-negrito)
-
 }
 
 .btn-para-voce:hover {
   border-color: #b6eaf3;
 }
 
-.para-voce:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-  border-color: #b6eaf3;
-}
-
 .para-voce {
-  padding: 1px 5px;
+  padding: 5px 5px;
   background-color: var(--color-para-voce);
 
 }
@@ -189,18 +189,14 @@ th {
   font-weight: bold;
 }
 
-footer {
-  background-color: var(--cor-footer);
-  color: rgb(40, 114, 136);
-}
-
 .faleconosco {
-  max-width: 400px;
+  max-width: 4000px;
   padding: 10px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: var(--cor-barra-footer);
 }
 
 .faleconosco h2 {
@@ -208,7 +204,6 @@ footer {
   margin-bottom: 20px;
 
 }
-
 
 .form-content {
   display: flex;
@@ -219,7 +214,6 @@ footer {
   width: 100%;
 }
 
-
 form {
   max-width: 400px;
   width: 100%;
@@ -228,7 +222,6 @@ form {
   flex-direction: column;
   gap: 15px;
 }
-
 
 .form-content p {
   max-width: 300px;
@@ -274,16 +267,14 @@ input[type="reset"]:hover {
 }
 
 .rodape-link {
-  background-color: var(--cor-barra-footer);
+  background-color: var(--cor-barra-nav);
   padding: 5px;
   display: flex;
   justify-content: center;
-
-
 }
 
 .rodape-link a {
-  border-color: #b6e7f0;
+  border-color: #212f31;
   padding: 20px;
   border: 1px solid #7e8d97;
   gap: 10px;
@@ -294,45 +285,65 @@ input[type="reset"]:hover {
   background-color: #aad0f3;
 }
 
+.redesocial  {
+  background-color: var(--cor-rede-social);
+  display: flex;
+  padding: 2px;
+  flex-direction: column;
+  align-items: center;
+}
+
 .redesocial i a {
   cursor: pointer;
   text-decoration: none;
 }
 
+.redes-sociais {
+  background-color:  var(--cor-rede-social);
+  padding: 15px;
+  text-align: center;
+  color: var(--cor-font-branco);
+  }
+
+footer {
+  background-color: var(--cor-barra-nav);
+  color: rgb(40, 114, 136);
+  padding: 5px;
+  width: 100%;
+}
+footer p{
+  color: var(--cor-font-branco);
+  }
 
 @media (max-width: 768px) {
-
+  
   .home .imagem {
     width: 85%;
   }
-
+.nav-topo{
+  font-size: 11px;
+}
   .catalogo .itens-card {
     width: 100%;
     flex-direction: column;
     padding: 0;
-
   }
-  /* table{
-    width: 10%;
-  } */
-  th, tb{
+  th,
+  tb {
     font-size: 10px;
   }
-
 }
 
-
-
 @media (max-width: 1020px) {
-
   .home .imagem {
     width: 85%;
   }
 }
-
+.rodape-link a {
+  border: none;
+  }
 .catalogo .itens-card {
   width: 100%;
   flex-direction: column;
   padding: 0;
-
 }
