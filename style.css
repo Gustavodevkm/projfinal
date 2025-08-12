@@ -16,7 +16,12 @@
   --cor-font-branco:  rgb(241, 241, 241);
   --cor-rede-social: #6495f0;
 }
-
+.aviso{
+  border: 2px solid blue;
+  padding: 10px;
+  background-color: var(--cor-catalago);
+  color: rgb(153, 77, 77);
+}
 main {
   justify-content: center;
 
@@ -347,3 +352,4 @@ footer p{
   flex-direction: column;
   padding: 0;
 }
+
